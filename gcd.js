@@ -1,16 +1,4 @@
-/*one option for gcd of two numbers
-let gcd = function(x, y) {
-    let smaller = Math.min(x, y);
-    let larger = Math.max(x, y);
-
-    if (larger % smaller === 0) {
-        return smaller;
-    } else {
-        return gcd(smaller, larger % smaller)
-    }
-}*/
-
-
+//Solution 1, DOES NOT WORK
 /*for testing the functions below
 let numbArray = [4, 16, 24, 8, 12];*/
 
@@ -37,7 +25,7 @@ let gcd = function(x, y) {
     }
 
 let gcdArr = function(arr) {
-    let gcdres = gcd(arr[0], arr[1])
+    let gcdres = gcd(arr[0], arr[1]);
     for (let i=3; i<arr.length; i++) {
         gcdres = gcd(gcdres, arr[i]);
         }
@@ -67,4 +55,28 @@ function gcd_more_than_two_numbers(input) {
             a = gcd_two_numbers( a, b );
         }
         return a;
-    }*/
+    }
+function gcd_two_numbers(x, y) {
+    if ((typeof x !== 'number') || (typeof y !== 'number')) 
+        return false;
+    x = Math.abs(x);
+    y = Math.abs(y);
+    while(y) {
+        var t = y;
+        y = x % y;
+        x = t;
+    }
+    return x;
+}*/
+
+/*one option for gcd of two numbers
+let gcd = function(x, y) {
+    let smaller = Math.min(x, y);
+    let larger = Math.max(x, y);
+
+    if (larger % smaller === 0) {
+        return smaller;
+    } else {
+        return gcd(smaller, larger % smaller)
+    }
+}*/
