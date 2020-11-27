@@ -2,7 +2,12 @@
 /*for testing the functions below
 let numbArray = [4, 16, 24, 8, 12];*/
 
-let numbArray = ['a', 'b', 'c', 'd'];
+let numbArray = [
+    {a = Number(document.querySelector('numb1').value)},
+    {b = Number(document.querySelector('numb2').value)},
+    {c = Number(document.querySelector('numb3').value)},
+    {d = Number(document.querySelector('numb4').value)}
+];
 
 let a = Number(document.querySelector('numb1').value);
 let b = Number(document.querySelector('numb2').value);
